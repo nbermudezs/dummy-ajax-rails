@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index'
-  post 'home#do_something'
+  post 'home/do_something'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
