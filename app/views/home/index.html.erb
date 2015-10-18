@@ -1,2 +1,21 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+<script type="text/javascript">
+  var variable_test = 'begin';
+  $.ajax({
+    url : "/home/do_something",
+    type : "post",
+    data : { variable_test: variable_test },
+  }).success(function(response) {
+    alert('you sent ' + response);
+    console.log(response);
+  }).done(function(response) {
+    alert('1');
+  }).fail(function (error) {
+    alert('2');
+  });
+
+  var original = '<%= @variable %>';
+  alert('Original value of variable ' + original);
+</script>
